@@ -12,6 +12,10 @@
       "require": "./dist/index.cjs"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javivelasco/react-prehydrate.git"
+  },
   "files": [
     "dist",
     "README.md"
