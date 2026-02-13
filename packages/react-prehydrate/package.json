@@ -13,10 +13,11 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && cp ../../README.md .",
     "test": "vitest run",
     "test:watch": "vitest"
   },
