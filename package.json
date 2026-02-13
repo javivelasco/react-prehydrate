@@ -2,12 +2,12 @@
   "private": true,
   "packageManager": "pnpm@8.15.7",
   "scripts": {
-    "build": "pnpm --filter react-prehydrate build",
-    "test": "pnpm --filter react-prehydrate test",
+    "build": "turbo build",
+    "test": "turbo test",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mjs,json,md,yaml,yml,css}\"",
     "version:prepare": "changeset version && pnpm install --no-frozen-lockfile",
-    "release": "pnpm build && changeset publish",
-    "dev:example": "pnpm --filter next-resizable-sidebars dev",
+    "release": "turbo build --filter=react-prehydrate && changeset publish",
+    "dev:example": "turbo dev --filter=next-resizable-sidebars",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -15,7 +15,8 @@
     "@changesets/cli": "^2.29.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "prettier": "3.8.1"
+    "prettier": "3.8.1",
+    "turbo": "^2.8.7"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs}": [
