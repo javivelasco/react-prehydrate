@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-panel: #141414;
+  --color-border: #2a2a2a;
+  --color-surface: #1e1e1e;
+}
+
+:root {
+  --left-sidebar-width: 280;
+  --right-sidebar-width: 280;
+}
+
+@utility sidebar-w-left {
+  width: calc(var(--left-sidebar-width) * 1px);
+}
+
+@utility sidebar-w-right {
+  width: calc(var(--right-sidebar-width) * 1px);
+}
+
+@utility skeleton-pulse {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
