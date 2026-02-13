@@ -1,11 +1,11 @@
 {
   "private": true,
+  "packageManager": "pnpm@8.15.7",
   "scripts": {
     "build": "pnpm --filter react-prehydrate build",
     "test": "pnpm --filter react-prehydrate test",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mjs,json,md,yaml,yml,css}\"",
-    "changeset": "changeset",
-    "version": "changeset version",
+    "version:prepare": "changeset version && pnpm install --no-frozen-lockfile",
     "release": "pnpm build && changeset publish",
     "dev:example": "pnpm --filter next-resizable-sidebars dev",
     "prepare": "husky"
